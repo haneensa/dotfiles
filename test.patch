@@ -23,7 +23,7 @@ index 56c1972..96a402a 100644
 -						lock->l_last_activity));
 +		LCONSOLE_WARN("lock timed out (enqueued at "CFS_TIME_T", " CFS_DURATION_T"s ago)\n", lock->l_last_activity, cfs_time_sub(get_seconds(), lock->l_last_activity));
  		LDLM_DEBUG(lock,
--					"lock timed out (enqueued at "
+		-					"lock timed out (enqueued at "
 -					CFS_TIME_T ", " CFS_DURATION_T
 -					"s ago); not entering recovery in server code, just going back to sleep",
 -					lock->l_last_activity,

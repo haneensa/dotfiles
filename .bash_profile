@@ -50,23 +50,17 @@ bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
 # Setting PATH for EPD_free-7.3-2
-# The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
 # Setting PATH for EPD_free-7.3-2
-# The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
 # Setting PATH for EPD_free-7.3-2
-# The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 export PATH
 
-##
-# Your previous /Users/ahmedmohammed/.bash_profile file was backed up as /Users/ahmedmohammed/.bash_profile.macports-saved_2013-02-19_at_22:56:02
-##
 
 # MacPorts Installer addition on 2013-02-19_at_22:56:02: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -86,4 +80,4 @@ export JDK_HOME=$(/usr/libexec/java_home)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/bin:$PATH
+#export PATH="/usr/local/Cellar/ruby/2.1.4/bin:$PATH"
