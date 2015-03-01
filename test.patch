@@ -1,0 +1,61 @@
+From 354e485709022703ca1596de1ff27e077dbb967c Mon Sep 17 00:00:00 2001
+From: Haneen Mohammed <hamohammed.sa@gmail.com>
+Date: Sun, 1 Mar 2015 19:47:12 +0300
+Subject: [PATCH] test
+
+Signed-off-by: Haneen Mohammed <hamohammed.sa@gmail.com>
+---
+ drivers/staging/lustre/lustre/ldlm/ldlm_request.c | 22 +++++++++-------------
+ 1 file changed, 9 insertions(+), 13 deletions(-)
+
+diff --git a/drivers/staging/lustre/lustre/ldlm/ldlm_request.c b/drivers/staging/lustre/lustre/ldlm/ldlm_request.c
+index 56c1972..96a402a 100644
+--- a/drivers/staging/lustre/lustre/ldlm/ldlm_request.c
++++ b/drivers/staging/lustre/lustre/ldlm/ldlm_request.c
+@@ -97,18 +97,14 @@ int ldlm_expired_completion_wait(void *data)
+ 	if (lock->l_conn_export == NULL) {
+ 		static unsigned long next_dump, last_dump;
+ 
+-		LCONSOLE_WARN("lock timed out (enqueued at "CFS_TIME_T", "
+-						CFS_DURATION_T"s ago)\n",
+-						lock->l_last_activity,
+-						cfs_time_sub(get_seconds(),
+-						lock->l_last_activity));
++		LCONSOLE_WARN("lock timed out (enqueued at "CFS_TIME_T", " CFS_DURATION_T"s ago)\n", lock->l_last_activity, cfs_time_sub(get_seconds(), lock->l_last_activity));
+ 		LDLM_DEBUG(lock,
+-					"lock timed out (enqueued at "
+-					CFS_TIME_T ", " CFS_DURATION_T
+-					"s ago); not entering recovery in server code, just going back to sleep",
+-					lock->l_last_activity,
+-					cfs_time_sub(get_seconds(),
+-					lock->l_last_activity));
++				"lock timed out (enqueued at "
++				CFS_TIME_T ", " CFS_DURATION_T
++				"s ago); not entering recovery in server code, just going back to sleep",
++				lock->l_last_activity,
++				cfs_time_sub(get_seconds(),
++				lock->l_last_activity));
+ 		if (cfs_time_after(cfs_time_current(), next_dump)) {
+ 			last_dump = next_dump;
+ 			next_dump = cfs_time_shift(300);
+@@ -194,7 +190,7 @@ int ldlm_completion_ast_async(struct ldlm_lock *lock, __u64 flags, void *data)
+ 	}
+ 
+ 	LDLM_DEBUG(lock,
+-				"client-side enqueue returned a blocked lock, going forward");
++		"client-side enqueue returned a blocked lock, going forward");
+ 	ldlm_reprocess_all(lock->l_resource);
+ 	return 0;
+ }
+@@ -326,7 +322,7 @@ int ldlm_blocking_ast_nocheck(struct ldlm_lock *lock)
+ 			CERROR("ldlm_cli_cancel: %d\n", rc);
+ 	} else {
+ 		LDLM_DEBUG(lock,
+-					"Lock still has references, will be cancelled later");
++			  "Lock still has references, will be cancelled later");
+ 	}
+ 	return 0;
+ }
+-- 
+1.9.1
+
