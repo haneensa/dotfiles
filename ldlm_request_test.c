@@ -98,7 +98,7 @@ int ldlm_expired_completion_wait(void *data)
 		static unsigned long next_dump, last_dump;
 
 		LCONSOLE_WARN("lock timed out (enqueued at "CFS_TIME_T", "
-						CFS_DURATION_T"s ago)\n",
+                  CFS_DURATION_T"s ago)\n",
 						lock->l_last_activity,
 						cfs_time_sub(get_seconds(),
 						lock->l_last_activity));
