@@ -1,8 +1,5 @@
-export PATH=/Applications/Android\ Studio.app/sdk/tools:/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
-
 alias sbc='bc -l'
 alias mkdir='mkdir -p'
-alias mount='mount |column -t'
 alias today='date +"%d-%m-%Y"'
 
 alias c='clear'
@@ -11,6 +8,7 @@ alias h='history'
 alias ..='cd ..'
 alias l='ls -G'
 alias s='source'
+
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
@@ -49,35 +47,11 @@ bakwht='\e[47m'   # White
  
 txtrst='\e[0m'    # Text Reset
 
-# Setting PATH for EPD_free-7.3-2
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-export PATH
 
-# Setting PATH for EPD_free-7.3-2
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-export PATH
-
-# Setting PATH for EPD_free-7.3-2
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-export PATH
-
-
-# MacPorts Installer addition on 2013-02-19_at_22:56:02: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
 PS1='->'
 print_before_the_prompt(){
-	printf "\n$txtred%s\n$txtrst" "$PWD"
+	printf "\n$txtylw%s\n$txtrst" "$PWD"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
 
-
-
-export JAVA_HOME=$(/usr/libexec/java_home)
-
-export JDK_HOME=$(/usr/libexec/java_home)
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH=/usr/local/bin:$PATH
-#export PATH="/usr/local/Cellar/ruby/2.1.4/bin:$PATH"
