@@ -1,0 +1,29 @@
+set from = 'hamohammed.sa@gmail.com'
+set realname = 'Haneen Mohammed'
+set use_from = yes
+
+set imap_user = 'hamohammed.sa@gmail.com'
+set imap_pass = '*****'
+
+set folder = 'imaps://imap.gmail.com:993'
+set spoolfile = '+INBOX' # unfiltered email arrives here
+mailboxes = '+INBOX'
+set postponed = '+[Gmail]/Drafts'
+
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+# Keep IMAP connection alive by polling intermittently (time in seconds)
+set imap_keepalive = 300
+# How often to check for new mail (time in seconds)
+set mail_check = 120
+#allow Mutt to open new imap connection automaticlly
+unset imap_passive
+
+set smtp_url = 'smtp://hamohammed.sa@smtp.gmail.com:587/'
+set smtp_pass = '*****'
+set move = no
+
+set record = +Sent # where sent emails will be saved
+unset record
+
