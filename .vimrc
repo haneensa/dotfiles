@@ -27,3 +27,12 @@ set title
 " plugins
 execute pathogen#infect()
 
+" Enable copying to clipboard using `COM + c`
+map <C-c> y:e ~/clipsongsboard<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
+
+
+" NERD Tree
+let g:NERDTreeDirArrows=0
+autocmd vimenter * NERDTree
+autocmd vimenter * wincmd p
+map <C-n> :NERTreeToggle<CR>
