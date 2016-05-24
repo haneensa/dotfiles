@@ -23,6 +23,16 @@ set history=1000
 set undolevels=1000  "use many muchos level of undo
 "set wildignore=*.swp,*.bak,*.pyc,*.class
 set title
+"from alexeyshmalko
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgray
+
+" for c file type
+augroup project
+    autocmd!
+    autocmd BufRead, BufNewFile *.h, *.c, set filetype=c.doxygen
+augroup END
+
 
 " plugins
 execute pathogen#infect()
@@ -36,3 +46,4 @@ let g:NERDTreeDirArrows=0
 autocmd vimenter * NERDTree
 autocmd vimenter * wincmd p
 map <C-n> :NERTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
