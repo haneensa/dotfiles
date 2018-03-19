@@ -1,3 +1,8 @@
+alias gitlog='git log --pretty=oneline --abbrev-commit'
+alias mlist='perl scripts/get_maintainer.pl --separator , --nokeywords --nogit --nogit-fallback --norolestats --nol -f '
+
+alias lcheck='~/git/kernels/staging/scripts/checkpatch.pl -f'
+
 alias sbc='bc -l'
 alias mkdir='mkdir -p'
 alias today='date +"%d-%m-%Y"'
