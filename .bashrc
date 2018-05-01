@@ -53,10 +53,12 @@ bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
 
-PS1='->'
+PS1='\$ '
 print_before_the_prompt(){
-	printf "\n$txtylw%s\n$txtrst" "$PWD"
+	printf "\n$txtylw%s\n$txtrst" "$PWD $(__git_ps1 '(%s)'):"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
 
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
