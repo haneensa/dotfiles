@@ -27,3 +27,6 @@ set move = no
 set record = +Sent # where sent emails will be saved
 unset record
 
+set query_command="goobook query '%s'"
+macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
+bind editor <Tab> complete-query
