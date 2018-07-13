@@ -1,3 +1,5 @@
+alias mvkms='sudo make modules SUBDIRS=drivers/gpu/drm/vkms'
+alias insvkms='sudo cp drivers/gpu/drm/vkms/vkms.ko /lib/modules`uname -r`/kernel/drivers/gpu/drm/vkms/vkms.ko'
 alias gitlog='git log --pretty=oneline --abbrev-commit'
 alias mlist='perl scripts/get_maintainer.pl --separator , --nokeywords --nogit --nogit-fallback --norolestats --nol -f '
 
