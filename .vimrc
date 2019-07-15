@@ -5,18 +5,19 @@ syntax on
 filetype plugin indent on
 syn on se title
 set nowrap
-set tabstop=8
-set softtabstop=8
-set shiftwidth=8
-set noexpandtab
-
+set tabstop=2
+set softtabstop=2 
+set expandtab
+set smarttab    "insert tabs on the start of a line according to shiftwidth, not tabstop
+set shiftwidth=2
+set noshiftround
 set backspace=indent,eol,start "allow backspace  over everything in insert mode
 set copyindent
 set showmatch   "set show matching parenthesis
 set ignorecase  "ignore case when searching
 set smartcase   "ignore case only if pattern all lowercase
-"set smarttab    "insert tabs on the start of a line according to shiftwidth, not tabstop
 set number
+set ruler
 set mouse=a
 set hlsearch    "highligh search terms
 set incsearch   "show seach matches as you type
